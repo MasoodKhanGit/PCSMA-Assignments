@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:id="@+id/lRelative">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Request"
+        android:id="@+id/tGetMethod"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get"
+        android:id="@+id/bGet"
+        android:onClick="onClickRequest"
+        android:layout_alignTop="@+id/bput"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Status: "
+        android:id="@+id/tStatusVisible"
+        android:layout_below="@+id/tGetMethod"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Response: "
+        android:id="@+id/tResponseVisible"
+        android:layout_below="@+id/tStatusVisible"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/tStatusInvisible"
+        android:layout_alignTop="@+id/tStatusVisible"
+        android:layout_toEndOf="@+id/tStatusVisible"
+        android:text="null" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/tResponseInvisible"
+        android:layout_below="@+id/tStatusInvisible"
+        android:layout_toEndOf="@+id/tResponseVisible"
+        android:text="null" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="put"
+        android:id="@+id/bput"
+        android:onClick="onClickRequest"
+        android:layout_below="@+id/tResponseVisible"
+        android:layout_toEndOf="@+id/bGet"
+        android:layout_marginTop="49dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="post"
+        android:id="@+id/bpost"
+        android:layout_alignTop="@+id/bput"
+        android:layout_toEndOf="@+id/bput"
+        android:onClick="onClickRequest"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="delete"
+        android:id="@+id/bdelete"
+        android:layout_alignTop="@+id/bpost"
+        android:layout_alignParentEnd="true"
+        android:onClick="onClickRequest"/>
+
+</RelativeLayout>
